@@ -1,0 +1,37 @@
+services:
+  airflow-init:
+    build: .
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - airflow_db:/opt/airflow
+    entrypoint: /bin/bash
+    command: -c "
+      airflow db init &&
+      airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com &&
+      exit 0 "
+
+  airflow-webserver:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - airflow_db:/opt/airflow
+    depends_on:
+      - airflow-init
+    command: airflow webserver
+
+  airflow-scheduler:
+    build: .
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - airflow_db:/opt/airflow
+    depends_on:
+      - airflow-init
+    command: airflow scheduler
+
+volumes:
+  airflow_db:
