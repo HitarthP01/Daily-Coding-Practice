@@ -26,8 +26,6 @@ Includes DAGs to extract, transform, and load data with scheduling and monitorin
 
 ## How to Run
 
-### flask-redis-app
-
 1. Clone the repository:
 ```bash
 git clone https://github.com/HitarthP01/Daily-Coding-Practice.git
