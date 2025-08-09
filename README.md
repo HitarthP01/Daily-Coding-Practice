@@ -1,15 +1,28 @@
 # Daily Coding Practice
 
-A collection of daily coding tasks for data engineering and MLOps.
+A curated collection of daily coding exercises and mini-projects focused on Data Engineering and MLOps to build practical skills and deepen understanding.
+
+---
 
 ## Projects
-- **flask-redis-app**: Flask API with Redis for key-value storage.
+
+### flask-redis-app  
+A lightweight Flask API integrated with Redis for fast key-value data storage and retrieval.  
+**Tech stack:** Python, Flask, Redis, Docker, Docker Compose
+
+---
+
+### airflow-data-pipeline  
+An Apache Airflow project demonstrating automated ETL workflows for data engineering tasks.  
+Includes DAGs to extract, transform, and load data with scheduling and monitoring.  
+**Tech stack:** Python, Apache Airflow, Docker, Postgres (optional)
+
+---
 
 ## How to Run
-1. Clone: `git clone https://github.com/HitarthP01/Daily-Coding-Practice.git`
-2. Navigate to a project (e.g., `cd flask-redis-app`).
-3. Run: `docker-compose up --build`.
 
-## Future Tasks
-- SQL with PostgreSQL
-- AWS Lambda
+### flask-redis-app
+
+1. Clone the repository:
+```bash
+git clone https://github.com/HitarthP01/Daily-Coding-Practice.git
