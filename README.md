@@ -3,6 +3,11 @@
 A curated collection of daily coding exercises and mini-projects focused on Data Engineering and MLOps to build practical skills and deepen understanding.
 
 ---
+## Table of Contents
+
+- [Projects](#projects)
+  - [flask-redis-app](#flask-redis-app)
+  - [airflow-data-pipeline](#airflow-data-pipeline)
 
 ## Projects
 
