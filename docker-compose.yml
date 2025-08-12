@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  mlflow:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - C:/Users/hitar/Desktop/Daily-Coding-Practice/mlflow-experiment/mlruns:/mlruns
+      - C:/Users/hitar/Desktop/Daily-Coding-Practice/mlflow-experiment/mlflow_db:/mlflow_db
